@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fourier Transform Visualizer</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Fourier Transform Visualizer</h1>
+        <p class="subtitle">Time Domain - Frequency Domain - Winding Diagram</p>
+    </header>
+
+    <main id="container">
+
+        <!-- Top: Time-domain waveform -->
+        <section id="waveform-section" aria-label="Time Domain Waveform">
+            <canvas id="waveform"></canvas>
+        </section>
+
+        <!-- Bottom: Spectrum + Winding -->
+        <section id="bottom">
+            <div id="spectrum-container" aria-label="Magnitude Spectrum">
+                <canvas id="spectrum"></canvas>
+            </div>
+
+            <div id="winding-container" aria-label="Winding Diagram">
+                <canvas id="winding"></canvas>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Controls -->
+    <footer>
+        <div id="controls">
+            <label for="freqSlider">Frequency k: <span id="kLabel">0</span></label>
+            <input type="range" id="freqSlider" min="0" max="32" value="0">
+
+            <label for="waveformSelect">Waveform:</label>
+            <select id="waveformSelect"></select>
+            <!-- NEW: Equation box moved here -->
+            <div id="equationBox" class="equation-box"></div>
+            <button id="computeBtn">Compute DFT</button>
+        </div>
+    </footer>
+
+    <!-- JS Modules -->
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>

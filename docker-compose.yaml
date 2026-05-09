@@ -1,0 +1,7 @@
+name: "Fourier-Transform-Visualizer"
+services:
+  fourier:
+    build: .
+    container_name: fourier-transform-visualizer
+    ports:
+      - "8085:80"
