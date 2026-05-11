@@ -46,8 +46,26 @@
             <select id="waveformSelect"></select>
             <!-- NEW: Equation box moved here -->
             <div id="equationBox" class="equation-box"></div>
-            <button id="computeBtn">Compute DFT</button>
+            <button id="computeBtn">Animate DFT</button>
         </div>
+        <details id="detailsPanel">
+            <summary>Details</summary>
+            <div class="details-content">
+                <p><strong>DFT Animation:</strong> Shows how each frequency component accumulates as a rotating phasor.
+                </p>
+                <p><strong>Color Legend:</strong></p>
+                <ul>
+                    <li><span style="color:#ffff00;">Yellow</span> – Trajectory (frequency present)</li>
+                    <li><span style="color:#00ccff;">Cyan</span> – Final vector (DFT coefficient)</li>
+                    <li><span style="color:#888888;">Gray</span> – Trajectory (frequency absent)</li>
+                    <li><span style="color:#ff4444;">Red</span> – Vanishing vector (absent frequency)</li>
+                    <li><span style="color:#666666;">Dark gray</span> – Trajectory (no DFT yet)</li>
+                    <li><span style="color:#999999;">Light gray</span> – Vector (no DFT yet)</li>
+                </ul>
+                <p><strong>Tip:</strong> Move the slider to explore how each frequency contributes to the signal.</p>
+            </div>
+        </details>
+
     </footer>
 
     <!-- JS Modules -->
